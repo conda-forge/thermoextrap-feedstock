@@ -23,7 +23,7 @@ requirements:
     - hatchling
     - pip
   run:
-    - python >={{ python_m
+    - python >={{ python_min }}
     - attrs >=24.1.0
     - cmomy >=0.24.0
     - dm-tree <0.1.9
