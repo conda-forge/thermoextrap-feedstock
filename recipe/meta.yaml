@@ -1,5 +1,6 @@
 {% set name = "thermoextrap" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.2" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/thermoextrap-{{ version }}.tar.gz
-  sha256: 884fba5d383ca55be53f4eff0c791b59c022e5f1171c65327c4ebe32dc60efa3
+  sha256: e0f49978cf1ab317223144aaa3a221505f17453f2c28f9a19ed7596dd3451fbe
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -22,15 +23,17 @@ requirements:
     - hatchling
     - pip
   run:
-    - python >={{ python_min }},<3.12
-    - attrs
-    - cmomy >=0.8
-    - lazy_loader
+    - python >={{ python_m
+    - attrs >=24.1.0
+    - cmomy >=0.24.0
+    - dm-tree <0.1.9
+    - lazy-loader
     - module-utilities >=0.2
-    - numpy >=1.20
+    - numba >=0.60.0
+    - numpy >=1.26.0
     - scipy
     - sympy
-    - xarray >=0.16
+    - xarray >=2024.7.0
 
 test:
   imports:
