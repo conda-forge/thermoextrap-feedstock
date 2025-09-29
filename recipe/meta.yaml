@@ -25,12 +25,13 @@ requirements:
   run:
     - python >={{ python_min }}
     - attrs >=24.1.0
-    - cmomy >=0.24.0
-    - dm-tree <0.1.9
+    - cmomy >=1.0.1
+    - dm-tree
     - lazy-loader
-    - module-utilities >=0.2
+    - module-utilities >=0.11.0
     - numba >=0.60.0
     - numpy >=1.26.0
+    - packaging
     - scipy
     - sympy
     - xarray >=2024.7.0
