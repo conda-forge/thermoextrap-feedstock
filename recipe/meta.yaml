@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - uv-build >=10.4,<0.11.0
+    - uv-build >=0.10.4,<0.11.0
     - pip
   run:
     - python >={{ python_min }}
