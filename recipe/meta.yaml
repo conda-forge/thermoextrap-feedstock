@@ -1,6 +1,6 @@
 {% set name = "thermoextrap" %}
-{% set version = "1.0.0" %}
-{% set python_min = "3.9" %}
+{% set version = "1.1.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/thermoextrap-{{ version }}.tar.gz
-  sha256: 0dd8fef6bd3681d9c1b7bce6d0822cd971d48aa1f0ef291569954f88946e7b31
+  sha256: b3b26bd34e27109f0dbb2756c466987abd57311dedb837752493665ee8099d5b
 
 build:
   noarch: python
@@ -18,9 +18,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - hatch-fancy-pypi-readme
-    - hatch-vcs
-    - hatchling
+    - uv-build >=0.10.4,<0.11.0
     - pip
   run:
     - python >={{ python_min }}
