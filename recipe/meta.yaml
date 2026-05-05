@@ -1,5 +1,5 @@
 {% set name = "thermoextrap" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/thermoextrap-{{ version }}.tar.gz
-  sha256: b3b26bd34e27109f0dbb2756c466987abd57311dedb837752493665ee8099d5b
+  sha256: 7e835f0e78915d51a1b3fb1bebce4e4be979b7c02ac9cb52b98d68746b296966
 
 build:
   noarch: python
