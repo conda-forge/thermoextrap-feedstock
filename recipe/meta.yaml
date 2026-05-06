@@ -18,12 +18,12 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - uv-build >=0.10.4,<0.11.0
+    - uv-build >=0.11.7,<0.12.0
     - pip
   run:
     - python >={{ python_min }}
     - attrs >=24.1.0
-    - cmomy >=1.0.1
+    - cmomy >=1.0.3
     - dm-tree
     - lazy-loader
     - module-utilities >=0.11.0
